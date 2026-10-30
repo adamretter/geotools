@@ -132,7 +132,7 @@ public class GML2FeatureCollectionEncoderDelegate extends FeatureCollectionEncod
 
         @Override
         public void initFidAttribute(AttributesImpl atts) {
-            atts.addAttribute(null, "fid", "fid", null, "");
+            atts.addAttribute(null, "fid", "fid", "CDATA", "");
         }
 
         @Override
@@ -153,7 +153,7 @@ public class GML2FeatureCollectionEncoderDelegate extends FeatureCollectionEncod
 
         @Override
         public void setSrsNameAttribute(AttributesImpl atts, CoordinateReferenceSystem crs) {
-            atts.addAttribute(null, "srsName", "srsName", null, GML2EncodingUtils.toURI(crs, true));
+            atts.addAttribute(null, "srsName", "srsName", "CDATA", GML2EncodingUtils.toURI(crs, true));
         }
 
         @Override
